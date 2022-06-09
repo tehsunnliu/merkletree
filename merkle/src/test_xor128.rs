@@ -1,12 +1,17 @@
 #![cfg(test)]
 
+extern crate std;
+
+use alloc::vec::Vec;
+
 use crate::hash::*;
-use crate::merkle::MerkleTree;
-use crate::merkle::next_pow2;
 use crate::merkle::log2_pow2;
+use crate::merkle::next_pow2;
+use crate::merkle::MerkleTree;
 use std::fmt;
 use std::hash::Hasher;
 use std::iter::FromIterator;
+use std::string::String;
 
 const SIZE: usize = 0x10;
 

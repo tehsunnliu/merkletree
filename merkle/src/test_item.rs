@@ -1,9 +1,11 @@
 #![cfg(test)]
 #![allow(unsafe_code)]
 
-use std::slice;
+extern crate std;
+
+use crate::hash::{Algorithm, Hashable};
 use std::mem;
-use crate::hash::{Hashable, Algorithm};
+use std::slice;
 
 #[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Default, Debug)]
 pub struct Item(pub u64);

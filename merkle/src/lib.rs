@@ -145,16 +145,23 @@
 //! }
 //! ```
 
+#![no_std]
 #![deny(
-    missing_docs, unused_qualifications,
-    missing_debug_implementations, missing_copy_implementations,
-    trivial_casts, trivial_numeric_casts,
-    unsafe_code, unstable_features,
+    missing_docs,
+    unused_qualifications,
+    missing_debug_implementations,
+    missing_copy_implementations,
+    trivial_casts,
+    trivial_numeric_casts,
+    unsafe_code,
+    unstable_features,
     unused_import_braces
 )]
 #![cfg_attr(not(feature = "std"), no_std)]
+#![cfg_attr(feature = "nightly", allow(unstable_features))]
 
-#![cfg_attr(feature="nightly", allow(unstable_features))]
+#[macro_use]
+extern crate alloc;
 
 /// Hash infrastructure for items in Merkle tree.
 pub mod hash;

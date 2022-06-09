@@ -1,11 +1,11 @@
 extern crate alloc;
 
+use crate::hash::{Algorithm, Hashable};
+use crate::proof::Proof;
 use alloc::vec::Vec;
 use core::iter::FromIterator;
 use core::marker::PhantomData;
 use core::ops;
-use crate::hash::{Hashable, Algorithm};
-use crate::proof::Proof;
 
 /// Merkle Tree.
 ///
